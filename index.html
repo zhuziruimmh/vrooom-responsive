@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrooom - We sell cars</title>
+    <style>
+        
+    /* 1. Basic Styling */
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #e3f2f1;
+        border-width: 10px solid #0d1601;
+        margin: 30px;
+        padding: 0;
+    }
+
+    .common{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:#0d1601
+    }
+
+    /* 2. Header Styling */
+    header {
+        background-color: #044688;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    /* 3. Navigation Styling */
+    nav {
+        background-color: #64b0bd;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 10px;
+        color: #e5eaee;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* 4. Headings and Text */
+    h1{
+        color: #f6f093;
+    }
+
+    h2 {
+        color: #e87407;
+        text-align: center;
+    }
+
+    /* 5. Table Styling (Compare section) */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+
+    /* 6. Responsive Image */
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    figure {
+        border-radius: 5px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    video{
+        display: block;
+        margin:0 auto;
+    }
+
+    
+
+
+    /* 7. Form Styling */
+    form {
+        padding: 20px;
+        border: 1px solid #ddd;
+        width: 80%;
+        margin: auto;
+    }
+    input, select, button {
+        padding: 10px;
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #003366;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
+    }
+    button:hover {
+        background-color: #0055aa;
+    }
+
+    /* 8. Flexbox Layout (Responsive cards or sections) */
+    #cars ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+    }
+    #cars li {
+        flex: 1 1 150px;
+        margin: 10px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    /* 9. Media Query (Mobile tweaks) */
+    @media (max-width: 600px) {
+        nav {
+        font-size: 0.9em;
+        }
+        table {
+        font-size: 0.9em;
+        }
+        form {
+        width: 95%;
+        }
+    }
+
+    /* 10. Footer Styling */
+    footer {
+        text-align: center;
+        color: black;
+        padding: 20px;
+        background-color: #eeeeee;
+        color: #666;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    <main>
+        <section  class="common">
+            <header>
+                <h1>Vrooom - We sell (the best) cars</h1>
+                <p>We sell the best cars in the world. We promise</p>
+            </header>
+        </section>
+    
+        <section>
+            <nav>
+                <a href="#cars">Our cars</a> |
+                <a href="#contact">Get in touch</a>
+            </nav>
+        </section>
+        
+        <section class = "car-list" id="cars">
+            <h2>Our cars</h2>
+            <ul>
+                <li>Ascent</li>
+                <li>Aurora</li>
+                <li>Barracuda</li>
+                <li>Chimera</li>
+                <li>Maestro</li>
+                <li>Syncopy</li>
+            </ul>
+        </section>
+
+        <section class = "compare">
+            <h2>Compare our cars</h2>
+            <table border="1">
+                <tr>
+                    <th></th>
+                    <th>Ascent</th>
+                    <th>Aurora</th>
+                    <th>Barracuda</th>
+                    <th>Chimera</th>
+                    <th>Maestro</th>
+                    <th>Syncopy</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <img src="./assets/ascent-vx8.jpg" alt="Ascent vX8" width="100">
+                    </td>
+                    <td>
+                        <img src="./assets/Aurora_Zen.jpg" alt="Aurora Zen" width="100">
+                    </td>
+                    <td>
+                        <img src="./assets/Barracuda_X10.jpg" alt="Barracuda X10" width="100">
+                    </td>
+                    <td>
+                        <img src="./assets/Chimera_Z3.jpg" alt="Chimera Z3" width="100">
+                    </td>
+                    <td>
+                        <img src="./assets/Maestro_MV.jpg" alt="Maestro MV" width="100">
+                    </td>
+                    <td>
+                        <img src="./assets/Syncopy_SV.jpg" alt="Syncopy SV" width="100">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>$50,000</td>
+                    <td>$60,000</td>
+                    <td>$70,000</td>
+                    <td>$80,000</td>
+                    <td>$90,000</td>
+                    <td>$100,000</td>
+                </tr>
+                <tr>
+                    <th>Top speed</th>
+                    <td>200 km/h</td>
+                    <td>210 km/h</td>
+                    <td>220 km/h</td>
+                    <td>230 km/h</td>
+                    <td>240 km/h</td>
+                    <td>250 km/h</td>
+                </tr>
+                <tr>
+                    <th>Acceleration</th>
+                    <td>0-60 mph in 3.2s</td>
+                    <td>0-60 mph in 3.1s</td>
+                    <td>0-60 mph in 3.0s</td>
+                    <td>0-60 mph in 2.9s</td>
+                    <td>0-60 mph in 2.8s</td>
+                    <td>0-60 mph in 2.7s</td>
+                </tr>
+            </table>
+        </section>
+        
+    
+        <h2>Feast your eyes on our car of the month </h2>
+        <figure>
+            <img src="./assets/mercedes-vision-avtr.webp" alt="Mercedes Vision AVTR" width="800">
+            <figcaption>A <mark>concept car</mark> from Mercedes </figcaption>
+        </figure>
+
+        <div class="video-section">
+            <h2>Watch it in action</h2>
+            <video src="./assets/avtr-demo.mp4" controls width="800"> Your browser does not support this video format.</video>
+        </div>
+          
+
+        <section class = "contact">
+            <form>
+                <h4>Book a test drive for any of these cars</h4>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" required><br><br>
+
+                <label for="model">Select a car:</label>
+                <select id="model" name="model">
+                    <option value="ascent">Ascent</option>
+                    <option value="aurora">Aurora</option>
+                    <option value="barracuda">Barracuda</option>
+                    <option value="chimera">Chimera</option>
+                    <option value="maestro">Maestro</option>
+                    <option value="syncopy">Syncopy</option><br><br><br>
+                <br><br>
+                </select>   
+                <br><br><br>
+
+                <label for="address">Your address:</label><br>
+                <textarea name="address" id="address" placeholder="Type your address here" rows="4" cols="50"></textarea><br><br>
+                <button type="submit">Send </button>
+
+            </form>
+            
+        </section>
+        
+    </main>
+    
+    <footer class="common">
+        <p>&copy; Vrooom 2025</p>
+        
+        <h4>Write to us</h4>
+
+        <p> Email us at <a href="mailto:info@vrooom.com">info@vrooom.com</a></p> 
+
+    </footer>
+</body>
+</html>

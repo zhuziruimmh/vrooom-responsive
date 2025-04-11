@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vrooom — Barracuda X10</title>
+  <style>
+    /* Basic Reset & Font */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0d1b2a;
+      color: white;
+      padding: 40px;
+    }
+
+    .hero-left {
+      flex: 2;
+      padding-right: 30px;
+    }
+
+    .hero-left img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .hero-left h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #ffb703;
+    }
+
+    .hero-left p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    .hero-right video {
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 183, 3, 0.4);
+    }
+
+    /* Cards Section */
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #003566;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-right video {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .card-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <img src="assets/mercedes-vision-avtr.webp" alt="Mercedes Vision AVTR">
+      <h1>Mercedes Vision AVTR</h1>
+      <p>The beast that breathes style. Pure performance meets modern design.</p>
+    </div>
+    <div class="hero-right">
+      <video autoplay muted loop>
+        <source src="assets/avtr-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Product Detail Cards -->
+  <section class="card-section">
+    <div class="card">
+      <h3>Top Speed</h3>
+      <p>Reaches up to 220mph on open track with aerodynamic support.</p>
+    </div>
+    <div class="card">
+      <h3>Acceleration</h3>
+      <p>0 to 60mph in just 3.0 seconds. Feel the surge instantly.</p>
+    </div>
+    <div class="card">
+      <h3>Eco Mode</h3>
+      <p>Enjoy a fuel-efficient ride in city mode with minimal emissions.</p>
+    </div>
+    <div class="card">
+      <h3>Interior Features</h3>
+      <p>Includes smart assistant, ambient lighting, and comfort memory seating.</p>
+    </div>
+  </section>
+
+</body>
+</html>
