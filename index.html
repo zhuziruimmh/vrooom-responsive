@@ -16,117 +16,102 @@
       color: #222;
     }
 
-    /* HERO SECTION */
     .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('assets/mercedes-vision-avtr.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('assets/mercedes-vision-avtr.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
     }
 
-    /* Optional dark overlay for unifying text+video contrast */
     .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-    z-index: 0;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      z-index: 0;
     }
 
-    /* Logo - slightly rotated, floating */
     .hero-logo {
-    position: absolute;
-    left: 2px;
-    width: 30%;
-    transform: rotate(-8deg);
-    z-index: 0;
+      position: absolute;
+      left: 2px;
+      width: 30%;
+      transform: rotate(-8deg);
+      z-index: 0;
     }
 
     .hero-logo img {
-    width: 100%;
+      width: 100%;
     }
 
-    /* Rotated text box */
     .hero-text {
-    position: absolute;
-    bottom: 3%;
-    left: 5%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-left: 6px solid #f6e3b4;
-    border-radius: 10px;
-    backdrop-filter: blur(1px);
-    z-index: 0;
-    
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 6px solid #f6e3b4;
+      border-radius: 10px;
+      backdrop-filter: blur(1px);
+      z-index: 0;
     }
 
     .hero-text h1 {
-    font-size: 3em;
-    color: #a0fcf7;
-    margin-bottom: 10px;
+      font-size: 3em;
+      color: #a0fcf7;
+      margin-bottom: 10px;
     }
 
     .hero-text p {
-    font-size: 1.2em;
-    color: #fff;
+      font-size: 1.2em;
+      color: #fff;
     }
 
-    /* Tilted video box */
     .hero-video {
-    position: absolute;
-    top: 180px;
-    right: 0px;
-    width: 40%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    z-index: 0;
-    border-radius: 5px;
-    overflow: hidden;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      width: 40%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      z-index: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
     }
 
     .hero-video video {
-    width: 100%;
-    display: block;
-    border-radius: 2px;
+      width: 100%;
+      display: block;
+      border-radius: 2px;
     }
 
-    /* CARD SECTION */
     .card-section {
-      
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 50px 10%;
       background-color: #ffffff;
     }
 
-    .top-card {
-      background: rgb(248, 240, 194);
-      border: 1px solid #f97705;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      padding: 20px;
-      width: 280px;
-      transition: transform 0.3s ease;
-    }
-    
     .card {
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.08);
       padding: 20px;
-      width: 280px;
+      width: calc(33.33% - 20px);
+      min-width: 280px;
       transition: transform 0.3s ease;
     }
 
-    .top-card:hover {
-      transform: translateY(10px);
-      box-shadow: 0 12px 24px rgba(101, 247, 205, 0.1);
-    }
-    
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 24px rgba(0,0,0,0.1);
@@ -142,7 +127,55 @@
       color: #444;
     }
 
-    /* Responsive Adjustments */
+    .form-section {
+      padding: 30px 10%;
+      background-color: #f9f9f9;
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+      color: #003566;
+    }
+
+    .form-section form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .form-section button {
+      background-color: #003566;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background-color: #002a4d;
+    }
+
+    footer {
+      background-color: #003566;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
     @media (max-width: 768px) {
       .hero-text {
         position: static;
@@ -157,9 +190,11 @@
         margin: 20px auto;
       }
 
+      .card {
+        width: 100%;
+      }
+
       .card-section {
-        
-        align-items: center;
         padding: 30px 5%;
       }
     }
@@ -167,21 +202,17 @@
 </head>
 <body>
 
-  <!-- HERO SECTION -->
   <section class="hero">
 
-    <!-- Logo -->
     <div class="hero-logo">
       <img src="assets/logo-enh.png" alt="Vrooom Logo">
     </div>
 
-    <!-- Text -->
     <div class="hero-text">
       <h1>Mercedes Vision AVTR</h1>
       <p>A marriage between art and science.</p>
     </div>
 
-    <!-- Video -->
     <div class="hero-video">
       <video autoplay loop muted>
         <source src="assets/avtr-demo.mp4" type="video/mp4">
@@ -191,17 +222,16 @@
 
   </section>
 
-  <!-- CARD SECTION -->
   <section class="card-section">
-    <div class="top-card">
+    <div class="card">
       <h3>Top Speed</h3>
       <p>Reaches up to 220mph on open track with aerodynamic support.</p>
     </div>
-    <div class="top-card">
+    <div class="card">
       <h3>Acceleration</h3>
       <p>0 to 60mph in just 3.0 seconds. The surge you feel is real.</p>
     </div>
-    <div class="top-card">
+    <div class="card">
       <h3>Eco Mode</h3>
       <p>Fuel-efficient and clean in city mode — go fast and green.</p>
     </div>
@@ -209,7 +239,47 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Autonomous Driving</h3>
+      <p>Using today's advanced recognition technology for autonomous driving. Handles complex urban scenarios effortlessly.</p>
+    </div>
+    <div class="card">
+      <h3>Biometric Recognition</h3>
+      <p>Advanced fingerprint, facial, and voice recognition for instant access. Personalizes settings based on your preferences.</p>
+    </div>
   </section>
+
+  <section class="form-section">
+    <h2>Book a Test Drive</h2>
+    <form>
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div>
+        <label for="phone">Your Phone:</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div>
+        <label for="date">Preferred Date:</label>
+        <input type="text" id="date" required>
+      </div>
+      <div>
+        <label for="time">Preferred Time:</label>
+        <input type="text" id="time" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Vrooom. All rights reserved.</p>
+    <p>Contact us: info@vrooom.com</p>
+  </footer>
 
 </body>
 </html>
